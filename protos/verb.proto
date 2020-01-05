@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package verbanoun;
+
+service Verb {
+    rpc ProvideVerb (VerbRequest) returns (VerbResponse) {}
+}
+
+message VerbRequest {
+    string category = 1;
+}
+
+message VerbResponse {
+    string verb = 1;
+}

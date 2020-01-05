@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package verbanoun;
+
+service Noun {
+    rpc ProvideNoun (NounRequest) returns (NounResponse) {}
+}
+
+message NounRequest {
+    string category = 1;
+}
+
+message NounResponse {
+    string noun = 1;
+}
